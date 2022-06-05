@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  FootballTracker
+
+  Created by Philip Boyko on 2.06.22.
+  
+*/
+
+// MARK: - Matches
+
+"matches.titleLabel" = "Matches";
+"matches.delete" = "Delete";
+
+// MARK: - AddMatch
+
+"addMatch.titleLabel" = "ADD NEW MATCH";
+"addMatch.matchNameLabel" = "Match name:";
+"addMatch.firstPersonLabel" = "Team one";
+"addMatch.secondPersonLabel" = "Team two";
+"addMatch.nameLabel" = "Name:";
+"addMatch.scoreLabel" = "Score:";
+"addMatch.saveButton" = "Save";
+"addMatch.error" = "Error";
+"addMatch.errorDescription" = "Failed to save Match, please try again";
+"addMatch.matchSaved" = "Match saved";
+
+// MARK: - ValidationError
+
+"validationError.invalidMatchName" = "Match name must be characters and numbers";
+"validationError.invalidTeamOneName" = "Please fill team one name field";
+"validationError.invalidTeamTwoName" = "Please fill team two name field";
+"validationError.emptyFields" = "Please fill all fields";
