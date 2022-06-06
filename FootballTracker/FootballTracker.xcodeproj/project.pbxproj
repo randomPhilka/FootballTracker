@@ -36,18 +36,11 @@
 		6380E69A284D23C80063223D /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6380E699284D23C80063223D /* ValidationService.swift */; };
 		6380E69D284D3D9A0063223D /* MatchData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6380E69B284D3D9A0063223D /* MatchData+CoreDataClass.swift */; };
 		6380E69E284D3D9A0063223D /* MatchData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6380E69C284D3D9A0063223D /* MatchData+CoreDataProperties.swift */; };
-		6380E6A1284D74CB0063223D /* AddMatchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6380E6A0284D74CB0063223D /* AddMatchPresenterTests.swift */; };
+		639E6239284DE90A007286E2 /* AddMatchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E6238284DE90A007286E2 /* AddMatchPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6380E62B2847D2B90063223D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6380E6092847D2B60063223D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6380E6102847D2B60063223D;
-			remoteInfo = FootballTracker;
-		};
-		6380E6352847D2BA0063223D /* PBXContainerItemProxy */ = {
+		639E6233284DE8BD007286E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6380E6092847D2B60063223D /* Project object */;
 			proxyType = 1;
@@ -64,8 +57,6 @@
 		6380E6202847D2B90063223D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6380E6232847D2B90063223D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6380E6252847D2B90063223D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6380E62A2847D2B90063223D /* FootballTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6380E6342847D2BA0063223D /* FootballTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6380E6482847D9770063223D /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		6380E64B2847DA7F0063223D /* CoreDataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPersistenceManager.swift; sourceTree = "<group>"; };
 		6380E64D2847DAD70063223D /* AppNavigationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationService.swift; sourceTree = "<group>"; };
@@ -90,7 +81,8 @@
 		6380E699284D23C80063223D /* ValidationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationService.swift; sourceTree = "<group>"; };
 		6380E69B284D3D9A0063223D /* MatchData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6380E69C284D3D9A0063223D /* MatchData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MatchData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		6380E6A0284D74CB0063223D /* AddMatchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchPresenterTests.swift; sourceTree = "<group>"; };
+		639E622F284DE8BD007286E2 /* FootballTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		639E6238284DE90A007286E2 /* AddMatchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMatchPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +93,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6380E6272847D2B90063223D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6380E6312847D2BA0063223D /* Frameworks */ = {
+		639E622C284DE8BD007286E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				6380E6132847D2B60063223D /* FootballTracker */,
-				6380E62D2847D2B90063223D /* FootballTrackerTests */,
+				639E6230284DE8BD007286E2 /* FootballTrackerTests */,
 				6380E6122847D2B60063223D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,8 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				6380E6112847D2B60063223D /* FootballTracker.app */,
-				6380E62A2847D2B90063223D /* FootballTrackerTests.xctest */,
-				6380E6342847D2BA0063223D /* FootballTrackerUITests.xctest */,
+				639E622F284DE8BD007286E2 /* FootballTrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,14 +136,6 @@
 				6380E6252847D2B90063223D /* Info.plist */,
 			);
 			path = FootballTracker;
-			sourceTree = "<group>";
-		};
-		6380E62D2847D2B90063223D /* FootballTrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				6380E6A0284D74CB0063223D /* AddMatchPresenterTests.swift */,
-			);
-			path = FootballTrackerTests;
 			sourceTree = "<group>";
 		};
 		6380E6472847D9600063223D /* Services */ = {
@@ -318,6 +294,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		639E6230284DE8BD007286E2 /* FootballTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				639E6238284DE90A007286E2 /* AddMatchPresenterTests.swift */,
+			);
+			path = FootballTrackerTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,41 +322,23 @@
 			productReference = 6380E6112847D2B60063223D /* FootballTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6380E6292847D2B90063223D /* FootballTrackerTests */ = {
+		639E622E284DE8BD007286E2 /* FootballTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6380E6412847D2BA0063223D /* Build configuration list for PBXNativeTarget "FootballTrackerTests" */;
+			buildConfigurationList = 639E6235284DE8BD007286E2 /* Build configuration list for PBXNativeTarget "FootballTrackerTests" */;
 			buildPhases = (
-				6380E6262847D2B90063223D /* Sources */,
-				6380E6272847D2B90063223D /* Frameworks */,
-				6380E6282847D2B90063223D /* Resources */,
+				639E622B284DE8BD007286E2 /* Sources */,
+				639E622C284DE8BD007286E2 /* Frameworks */,
+				639E622D284DE8BD007286E2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6380E62C2847D2B90063223D /* PBXTargetDependency */,
+				639E6234284DE8BD007286E2 /* PBXTargetDependency */,
 			);
 			name = FootballTrackerTests;
 			productName = FootballTrackerTests;
-			productReference = 6380E62A2847D2B90063223D /* FootballTrackerTests.xctest */;
+			productReference = 639E622F284DE8BD007286E2 /* FootballTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6380E6332847D2BA0063223D /* FootballTrackerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6380E6442847D2BA0063223D /* Build configuration list for PBXNativeTarget "FootballTrackerUITests" */;
-			buildPhases = (
-				6380E6302847D2BA0063223D /* Sources */,
-				6380E6312847D2BA0063223D /* Frameworks */,
-				6380E6322847D2BA0063223D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6380E6362847D2BA0063223D /* PBXTargetDependency */,
-			);
-			name = FootballTrackerUITests;
-			productName = FootballTrackerUITests;
-			productReference = 6380E6342847D2BA0063223D /* FootballTrackerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -387,13 +353,9 @@
 					6380E6102847D2B60063223D = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
-					6380E6292847D2B90063223D = {
+					639E622E284DE8BD007286E2 = {
 						CreatedOnToolsVersion = 13.2.1;
 						LastSwiftMigration = 1320;
-						TestTargetID = 6380E6102847D2B60063223D;
-					};
-					6380E6332847D2BA0063223D = {
-						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 6380E6102847D2B60063223D;
 					};
 				};
@@ -412,8 +374,7 @@
 			projectRoot = "";
 			targets = (
 				6380E6102847D2B60063223D /* FootballTracker */,
-				6380E6292847D2B90063223D /* FootballTrackerTests */,
-				6380E6332847D2BA0063223D /* FootballTrackerUITests */,
+				639E622E284DE8BD007286E2 /* FootballTrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -432,14 +393,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6380E6282847D2B90063223D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6380E6322847D2BA0063223D /* Resources */ = {
+		639E622D284DE8BD007286E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,33 +433,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6380E6262847D2B90063223D /* Sources */ = {
+		639E622B284DE8BD007286E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6380E6A1284D74CB0063223D /* AddMatchPresenterTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6380E6302847D2BA0063223D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				639E6239284DE90A007286E2 /* AddMatchPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6380E62C2847D2B90063223D /* PBXTargetDependency */ = {
+		639E6234284DE8BD007286E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6380E6102847D2B60063223D /* FootballTracker */;
-			targetProxy = 6380E62B2847D2B90063223D /* PBXContainerItemProxy */;
-		};
-		6380E6362847D2BA0063223D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6380E6102847D2B60063223D /* FootballTracker */;
-			targetProxy = 6380E6352847D2BA0063223D /* PBXContainerItemProxy */;
+			targetProxy = 639E6233284DE8BD007286E2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -709,17 +651,15 @@
 			};
 			name = Release;
 		};
-		6380E6422847D2BA0063223D /* Debug */ = {
+		639E6236284DE8BD007286E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8Z4JG6HJWC;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,17 +676,15 @@
 			};
 			name = Debug;
 		};
-		6380E6432847D2BA0063223D /* Release */ = {
+		639E6237284DE8BD007286E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8Z4JG6HJWC;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -759,42 +697,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballTracker.app/FootballTracker";
-			};
-			name = Release;
-		};
-		6380E6452847D2BA0063223D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8Z4JG6HJWC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PhilipBoiko.FootballTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FootballTracker;
-			};
-			name = Debug;
-		};
-		6380E6462847D2BA0063223D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8Z4JG6HJWC;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PhilipBoiko.FootballTrackerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FootballTracker;
 			};
 			name = Release;
 		};
@@ -819,20 +721,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6380E6412847D2BA0063223D /* Build configuration list for PBXNativeTarget "FootballTrackerTests" */ = {
+		639E6235284DE8BD007286E2 /* Build configuration list for PBXNativeTarget "FootballTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6380E6422847D2BA0063223D /* Debug */,
-				6380E6432847D2BA0063223D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6380E6442847D2BA0063223D /* Build configuration list for PBXNativeTarget "FootballTrackerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6380E6452847D2BA0063223D /* Debug */,
-				6380E6462847D2BA0063223D /* Release */,
+				639E6236284DE8BD007286E2 /* Debug */,
+				639E6237284DE8BD007286E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
