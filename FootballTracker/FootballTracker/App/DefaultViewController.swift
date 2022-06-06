@@ -21,7 +21,11 @@ class DefaultViewController: UIViewController {
     // MARK: - Public functions
 
     func setupUI() {}
-    func setupLocalization() {}
+
     func setupDelegates() {}
+
+    func setupLocalization() {
+        fatalError("\(#function) should be ovveriden")
+    }
 
 }
