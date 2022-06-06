@@ -38,6 +38,11 @@ final class MatchesViewController: DefaultViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         matchesPresenter.getMatches()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // resize dynamic cells
         tableView.reloadData()
     }
 
