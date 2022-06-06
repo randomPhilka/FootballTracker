@@ -21,6 +21,14 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grass" translatesAutoresizingMaskIntoConstraints="NO" id="VQN-zz-LdL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
                     </imageView>
+                    <visualEffectView opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1E-bk-fKm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZPM-i3-iFu">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="201"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </view>
+                        <blurEffect style="extraLight"/>
+                    </visualEffectView>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="BP4-Yb-X54">
                         <rect key="frame" x="40" y="25" width="240" height="50"/>
                         <subviews>
@@ -114,6 +122,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="VQN-zz-LdL" secondAttribute="trailing" id="6NB-dA-Yu1"/>
+                    <constraint firstItem="h1E-bk-fKm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7Mp-g6-6SK"/>
                     <constraint firstItem="BP4-Yb-X54" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="BDw-Jc-3JT"/>
                     <constraint firstAttribute="bottom" secondItem="VQN-zz-LdL" secondAttribute="bottom" id="XCM-wo-PaO"/>
                     <constraint firstItem="VQN-zz-LdL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="baz-sa-aYN"/>
@@ -122,6 +131,9 @@
                     <constraint firstItem="VQN-zz-LdL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fYK-TA-5NI"/>
                     <constraint firstItem="BP4-Yb-X54" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="h5Z-q0-C3X"/>
                     <constraint firstAttribute="trailing" secondItem="BP4-Yb-X54" secondAttribute="trailing" constant="40" id="kcn-Tx-avI"/>
+                    <constraint firstItem="h1E-bk-fKm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="q9q-qY-EYw"/>
+                    <constraint firstAttribute="bottom" secondItem="h1E-bk-fKm" secondAttribute="bottom" id="soH-Uu-hFN"/>
+                    <constraint firstAttribute="trailing" secondItem="h1E-bk-fKm" secondAttribute="trailing" id="vrJ-6d-Sih"/>
                     <constraint firstItem="v4a-Yn-XSS" firstAttribute="top" secondItem="BP4-Yb-X54" secondAttribute="bottom" constant="20" id="wyk-8n-4lg"/>
                     <constraint firstAttribute="bottomMargin" secondItem="v4a-Yn-XSS" secondAttribute="bottom" constant="10" id="zja-pG-b5J"/>
                 </constraints>
