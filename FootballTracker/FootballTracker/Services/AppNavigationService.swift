@@ -10,6 +10,7 @@ import UIKit
 enum StoryController: String{
     case matches
     case addMatch
+    case leaderboard
 
     // MARK: - Public
     
@@ -23,6 +24,7 @@ enum StoryController: String{
 enum StoryType: String {
     case matches
     case addMatch
+    case leaderboard
 
     // MARK: - Public
 

@@ -33,11 +33,20 @@ final class AddMatchPresenter {
                               scoreTwo: scores.teamTwo,
                               teamOne: teamOne,
                               teamTwo: teamTwo)
+            let firstPlayer = Player(name: teamOne ?? "", winCurrentGame: scores.teamOne > scores.teamTwo)
+            let secondPlayer = Player(name: teamTwo ?? "", winCurrentGame: scores.teamTwo > scores.teamOne)
+
             matchesPersistence.addMatch(match) { [weak self] error in
                 guard error == nil else { return }
-                DispatchQueue.main.async {
-                    self?.view?.presentAlert(title: localize("addMatch.matchSaved"), message: "") { _ in
-                        self?.view?.closeVC()
+                self?.playersPersistence.updatePlayer(firstPlayer) { error in
+                    guard error == nil else { return }
+                    self?.playersPersistence.updatePlayer(secondPlayer) { error in
+                        guard error == nil else { return }
+                        DispatchQueue.main.async {
+                            self?.view?.presentAlert(title: localize("addMatch.matchSaved"), message: "") { _ in
+                                self?.view?.closeVC()
+                            }
+                        }
                     }
                 }
             }
@@ -79,7 +88,9 @@ final class AddMatchPresenter {
     private var matchesPersistence: MatchesPersistenceProviding {
         return lazyServicelocator.getService()
     }
-
+    private var playersPersistence: PlayersPersistenceProviding {
+        return lazyServicelocator.getService()
+    }
     private var validationService: ValidationServiceProviding {
         return lazyServicelocator.getService()
     }

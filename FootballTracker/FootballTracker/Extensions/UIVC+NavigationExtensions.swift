@@ -20,5 +20,16 @@ extension UIViewController {
         navigationController?.pushViewController(controller, animated: animated)
     }
 
+    func pushFromRightToLeft(controller: StoryController, fromStory: StoryType, animated: Bool = true) {
+        let controller = fromStory.storyboard.instantiateViewController(withIdentifier: controller.identifier)
+        let transition = CATransition()
+        transition.duration = 0.45
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromLeft
+        self.navigationController?.view.layer.add(transition, forKey: kCATransition)
+        self.navigationController?.pushViewController(controller, animated: false)
+    }
+
 }
 

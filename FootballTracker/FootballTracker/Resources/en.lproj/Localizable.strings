@@ -10,13 +10,16 @@
 
 "matches.titleLabel" = "Matches";
 "matches.delete" = "Delete";
+"matches.error" = "Error";
+"matches.errorDescription" = "Failed to delete Match, please try again";
+
 
 // MARK: - AddMatch
 
 "addMatch.titleLabel" = "ADD NEW MATCH";
 "addMatch.matchNameLabel" = "Match name:";
-"addMatch.firstPersonLabel" = "Team one";
-"addMatch.secondPersonLabel" = "Team two";
+"addMatch.firstPersonLabel" = "Player one";
+"addMatch.secondPersonLabel" = "Player two";
 "addMatch.nameLabel" = "Name:";
 "addMatch.scoreLabel" = "Score:";
 "addMatch.saveButton" = "Save";
@@ -24,9 +27,18 @@
 "addMatch.errorDescription" = "Failed to save Match, please try again";
 "addMatch.matchSaved" = "Match saved";
 
+// MARK: - Leaderboard
+
+"leaderboard.title" = "Leaderboard";
+"leaderboard.firstFilterSegmentControl" = "won games";
+"leaderboard.secondFilterSegmentControl" = "played games";
+"leaderboard.wins" = "%@ wins";
+"leaderboard.games" = "%@ games";
+
 // MARK: - ValidationError
 
 "validationError.invalidMatchName" = "Match name must be characters and numbers";
 "validationError.invalidTeamOneName" = "Please fill team one name field";
 "validationError.invalidTeamTwoName" = "Please fill team two name field";
+"validationError.sameNames" = "Players names must be not similar";
 "validationError.emptyFields" = "Please fill all fields";

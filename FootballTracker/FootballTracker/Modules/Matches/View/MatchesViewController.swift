@@ -9,6 +9,7 @@ import UIKit
 
 protocol MatchesViewProtocol: AnyObject {
     func presentAddMatchesVC()
+    func presentLeaderboardVC()
 }
 
 final class MatchesViewController: DefaultViewController {
@@ -23,7 +24,10 @@ final class MatchesViewController: DefaultViewController {
     @IBAction func addMatchButtonTaped(_ sender: Any) {
         matchesPresenter.addMatchButtonPressed()
     }
-
+    @IBAction func leaderboardButtonTaped(_ sender: Any) {
+        matchesPresenter.leaderboardButtonPressed()
+    }
+    
     // MARK: - Properties
 
     lazy var matchesPresenter = MatchesPresenter(view: self)
@@ -58,7 +62,7 @@ final class MatchesViewController: DefaultViewController {
     // MARK: - Private methods
 
     private func setupTableView() {
-        tableView.register(UINib.init(nibName: "MatchTableViewCell", bundle: nil), forCellReuseIdentifier: MatchTableViewCell.identifier)
+        tableView.register(UINib.init(nibName: MatchTableViewCell.id, bundle: nil), forCellReuseIdentifier: MatchTableViewCell.id)
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableView.automaticDimension
     }
@@ -74,7 +78,7 @@ extension MatchesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: MatchTableViewCell.identifier, for: indexPath) as? MatchTableViewCell else { fatalError() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MatchTableViewCell.id, for: indexPath) as? MatchTableViewCell else { fatalError() }
         cell.update(with: matchesPresenter.matches[safe: indexPath.row])
         return cell
     }
@@ -88,9 +92,18 @@ extension MatchesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: localize("matches.delete")) { [weak self] (_,_,_) in
             guard let self = self else { return }
-            self.matchesPresenter.deleteMatch(buID: self.matchesPresenter.matches[safe: indexPath.row]?.id ?? "")
-            self.matchesPresenter.matches.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            self.matchesPresenter.deleteMatch(self.matchesPresenter.matches[safe: indexPath.row]) { [weak self] error in
+                guard error == nil else {
+                    #if DEBUG
+                    print("Failed to delete match from CoreData - \(error?.localizedDescription ?? "")")
+                    #endif
+                    self?.showAlert(title: localize("matches.error"), message: localize("matches.errorDescription"), handler: nil)
+                    return
+                }
+                self?.matchesPresenter.matches.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
         }
         let config = UISwipeActionsConfiguration(actions: [deleteAction])
         return config
@@ -104,6 +117,10 @@ extension MatchesViewController: MatchesViewProtocol {
 
     func presentAddMatchesVC() {
         push(controller: .addMatch, fromStory: .addMatch)
+    }
+
+    func presentLeaderboardVC() {
+        pushFromRightToLeft(controller: .leaderboard, fromStory: .leaderboard)
     }
 
 }
