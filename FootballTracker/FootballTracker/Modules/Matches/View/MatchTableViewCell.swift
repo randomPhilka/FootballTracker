@@ -9,7 +9,7 @@ import UIKit
 
 final class MatchTableViewCell: UITableViewCell {
 
-    static let identifier = "MatchTableViewCell"
+    static let id: String = String(describing: MatchTableViewCell.self)
 
     // MARK: - Outlets
 

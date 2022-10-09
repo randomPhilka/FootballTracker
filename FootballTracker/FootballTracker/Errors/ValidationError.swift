@@ -11,6 +11,7 @@ enum ValidationError: Error {
     case invalidMatchName
     case invalidTeamOneName
     case invalidTeamTwoName
+    case sameNames
     case emptyFields
     case multiple([ValidationError])
 }
@@ -25,6 +26,8 @@ extension ValidationError: LocalizedError {
             return localize("validationError.invalidTeamOneName")
         case .invalidTeamTwoName:
             return localize("validationError.invalidTeamTwoName")
+        case .sameNames:
+            return localize("validationError.sameNames")
         case .emptyFields:
             return localize("validationError.emptyFields")
         case .multiple(let errors):

@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - CoreData
         lazyServicelocator.addService(CoreDataPersistenceManagerProvider() as CoreDataPersistenceManagerProviding)
         lazyServicelocator.addService(MatchesPersistenceProvider() as MatchesPersistenceProviding)
+        lazyServicelocator.addService(PlayersPersistenceProvider() as PlayersPersistenceProviding)
 		// MARK: - Validation
         lazyServicelocator.addService(ValidationServiceProvider() as ValidationServiceProviding)
 

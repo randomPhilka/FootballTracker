@@ -31,6 +31,8 @@ final class ValidationServiceProvider: ValidationServiceProviding {
             errors.append(.invalidTeamOneName)
         } else if isUsernameValid(teamTwo) {
             errors.append(.invalidTeamTwoName)
+        } else if teamOne == teamTwo {
+            errors.append(.sameNames)
         }
 
         if errors.isEmpty {
